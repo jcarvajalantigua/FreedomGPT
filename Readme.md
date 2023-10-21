@@ -1,113 +1,108 @@
-# Freedom GPT
+# Libertad GPT
 
-![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)
+![Licencia de GitHub](https://img.shields.io/badge/license-GNU-blue.svg)
 
-![GitHub release](https://img.shields.io/github/release/ohmplatform/freedom-gpt-electron-app.svg)
+![Lanzamiento de GitHub](https://img.shields.io/github/release/ohmplatform/freedom-gpt-electron-app.svg)
 
-![GitHub stars](https://img.shields.io/github/stars/ohmplatform/freedom-gpt-electron-app.svg)
+![Estrellas de GitHub](https://img.shields.io/github/stars/ohmplatform/freedom-gpt-electron-app.svg)
 
-![GitHub All Releases](https://img.shields.io/github/downloads/ohmplatform/freedom-gpt-electron-app/total.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/ohmplatform/freedom-gpt-electron-app/total.svg)Esta base de código es para una aplicación basada en React y Electron que ejecuta FreedomGPT LLM localmente (sin conexión y privada) en Mac y Windows utilizando una interfaz basada en chat (basada en Alpaca Lora)
 
-# Join our Discord Community
 
-Join our Discord Server to get the latest updates and to interact with the community.
+## Introducción
 
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/h77wvJS4ga)
+Este es el repositorio de la aplicación Freedom GPT. Esta aplicación está construida usando
+[Electrón](https://www.electronjs.org/) y [React](https://reactjs.org/). Es una aplicación de escritorio que
+permite a los usuarios ejecutar modelos de alpaca en su máquina local.
 
-## Introduction
-
-This is the repository for the Freedom GPT application. This application is built using
-[Electron](https://www.electronjs.org/) and [React](https://reactjs.org/). It is a desktop application that
-allows users to run alpaca models on their local machine.
-
-## Prerequisites
+## Requisitos previos
 
 - [Node.js](https://nodejs.org/en/download/)
-- [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
-- [Git](https://git-scm.com/downloads)
+- [Hilo](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
+-[Git](https://git-scm.com/downloads)
 
-# If you want to contribute to the project
+# Si quieres contribuir al proyecto
 
-## Working with the repository
+## Trabajando con el repositorio
 
 ```sh
-git clone --recursive https://github.com/ohmplatform/FreedomGPT.git freedom-gpt
-cd freedom-gpt
-yarn install
+git clone --recursivo https://github.com/ohmplatform/FreedomGPT.git freedom-gpt
+cd libertad-gpt
+instalación de hilo
 ```
 
-# Building the llama.cpp library
+# Construyendo la biblioteca llama.cpp
 
-## Building from Source (MacOS/Linux)
+## Construyendo desde el código fuente (MacOS/Linux)
 
 ```sh
 cd llama.cpp
-make
+hacer
 ```
 
-## Building from Source (Windows)
+## Construyendo desde la fuente (Windows)
 
-- Download and install CMake: <https://cmake.org/download/>
-- Run the following commands one by one:
+- Descargue e instale CMake: <https://cmake.org/download/>
+- Ejecute los siguientes comandos uno por uno:
 
 ```ps1
 cd llama.cpp
-cmake .
-cmake --build . --config Release
+cmake.
+cmake-build. --config Lanzamiento
 ```
 
-- You should now have a `Release` folder with a `main.exe` file inside it. You can run this file to test the chat client.
+- Ahora deberías tener una carpeta `Release` con un archivo `main.exe` dentro. Puede ejecutar este archivo para probar el cliente de chat.
 
-## Changing the API URL
+## Cambiando la URL de la API
 
-We are using `http://localhost:8889` as the API URL, you can change it in the file
+Estamos usando `http://localhost:8889` como URL de API, puede cambiarlo en el archivo
 `src/index.ts`
 
-## Running the application
+## Ejecutando la aplicación
 
-To run the application, run the following command in your terminal:
-
-```sh
-yarn start
-
-⦻ Make sure you are in the root directory of the project.
-```
-
-## Dockerizing the application
-
-To run the docker image, run the following command in your terminal:
+Para ejecutar la aplicación, ejecute el siguiente comando en su terminal:
 
 ```sh
-docker pull freedomgpt/freedomgpt
-docker run -d -p 8889:8889 freedomgpt/freedomgpt
+inicio del hilo
+
+⦻ Asegúrese de estar en el directorio raíz del proyecto.
 ```
 
-If you want to build the docker image yourself, run the following command in your terminal:
+## Dockerizando la aplicación
+
+Para ejecutar la imagen de la ventana acoplable, ejecute el siguiente comando en su terminal:
 
 ```sh
-docker build -t freedomgpt/freedomgpt .
-
-OR
-
-yarn docker
+ventana acoplable tire freedomgpt/freedomgpt
+ventana acoplable ejecutar -d -p 8889:8889 freedomgpt/freedomgpt
 ```
 
-<!-- ## Working Video
+Si desea crear la imagen de la ventana acoplable usted mismo, ejecute el siguiente comando en su terminal:
+
+```sh
+ventana acoplable build -t freedomgpt/freedomgpt.
+
+O
+
+estibador de hilo
+```
+
+<!-- ## Vídeo de trabajo
 
 https://user-images.githubusercontent.com/54356944/233825525-d95accf3-a26b-4f37-8fc1-6e922f782a66.mov -->
 
-# Credits
+# Créditos
 
-This project utilizes several open-source packages and libraries, without which this project would not have been possible:
+Este proyecto utiliza varios paquetes y bibliotecas de código abierto, sin los cuales este proyecto no habría sido posible:
 
-"llama.cpp" - C++ library. https://github.com/ggerganov/llama.cpp
+"llama.cpp" - Biblioteca C++. https://github.com/ggerganov/llama.cpp
 
-"LLAMA" by Facebook Research - a low-latency, large-scale approximate nearest neighbor search algorithm. https://github.com/facebookresearch/llama
+"LLAMA" de Facebook Research: un algoritmo de búsqueda de vecino más cercano aproximado a gran escala y de baja latencia. https://github.com/facebookresearch/llama
 
-"Chatbot UI" - https://github.com/mckaywrigley/chatbot-ui
+"Interfaz de usuario de Chatbot" - https://github.com/mckaywrigley/chatbot-ui
 
-We would like to express our gratitude to the developers of these packages and their contributors for making their work available to the public under open source licenses. Their contributions have enabled us to build a more robust and efficient project.
+Nos gustaría expresar nuestro agradecimiento a los desarrolladores de estos paquetes y a sus colaboradores por poner su trabajo a disposición del público bajo licencias de código abierto. Sus contribuciones nos han permitido construir un proyecto más sólido y eficiente.
 
-# LICENSE
+# LICENCIA
 
-See the <a href="/LICENSE"> LICENSE </a>file.
+Consulte el archivo <a href="/LICENSE"> LICENCIA </a>.
